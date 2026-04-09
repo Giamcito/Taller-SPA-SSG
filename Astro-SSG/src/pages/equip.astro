@@ -1,0 +1,34 @@
+---
+import { TEAM_MEMBERS } from "@data/Team";
+import MainLayout from "@layouts/MainLayout.astro";
+---
+<MainLayout>
+  <div class="container">
+    <div class="card border-0 shadow-sm">
+      <div class="card-body p-4">
+        <h2 class="card-title mb-3">Equipo</h2>
+        <p class="text-muted mb-4">Integrantes del equipo cargados desde datos locales.</p>
+        <div class="table-responsive"> <table class="table table-striped border align-middle mb-0">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Rol</th>
+              <th>Especialidad</th>
+              <th>Correo</th>
+            </tr>
+          </thead>
+          <tbody>
+            {TEAM_MEMBERS.map((member) => (
+              <tr>
+                <td>{member.name}</td>
+                <td>{member.role}</td>
+                <td>{member.specialty}</td>
+                <td>{member.email}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</MainLayout>

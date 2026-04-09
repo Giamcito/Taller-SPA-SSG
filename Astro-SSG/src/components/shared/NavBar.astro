@@ -1,19 +1,22 @@
 ---
+import Icon from "@components/shared/Icon.astro";
+import NavLink from "@components/shared/NavLink.astro";
 import type { NavbarConfig } from "@interfaces/NavBar";
-import Icon  from "@components/shared/Icon.astro";
-import NavLink  from "@components/shared/NavLink.astro";
 
 
 const navbarConfig: NavbarConfig = {
     title: 'Astro App',
     iconConfig: {
-      icon: 'bootstrap',
-      size: 2
+    icon: 'bootstrap',
+    size: 2
     },
     navLinks: [
-      { text: 'Usuarios', url: '/users' },
-      { text: 'Productos', url: '/products' },
-      { text: 'Fecha', url: '/current-date' },
+    { text: 'Usuarios', url: '/users' },
+    { text: 'Productos', url: '/products' },
+    { text: 'Fecha', url: '/current-date' },
+    { text: 'Contacto', url: '/Contact' },
+    { text: 'Servicios', url: '/Service' },
+    { text: 'Equipo', url: '/equip' }
     ]
 };
 
