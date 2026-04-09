@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
+import { ContactoPage } from './pages/contacto/contacto.page';
 import { DatePage } from './pages/date/date.page';
+import { EquipoPage } from './pages/equipo/equipo.page';
 import { ProductsPage } from './pages/products/products.page';
+import { ServiciosPage } from './pages/servicios/servicios.page';
 import { UsersPage } from './pages/users/users.page';
 
 /**
@@ -46,6 +49,36 @@ export const routes: Routes = [
    * de mostrar la fecha actual del sistema.
    */
   { path: 'date', component: DatePage },
+
+  /**
+   * Ruta de contacto.
+   *
+   * @remarks
+   * Renderiza el componente `ContactoPage`, encargado
+   * de mostrar la información de contacto.
+   */
+
+  { path: 'contact', component: ContactoPage },
+
+  /**
+   * Ruta de servicios.
+   *
+   * @remarks
+   * Renderiza el componente `ServiciosPage`, encargado
+   * de mostrar la información de los servicios ofrecidos.
+   */
+
+  { path: 'services', component: ServiciosPage },
+
+  /**
+   * Ruta del equipo.
+   *
+   * @remarks
+   * Renderiza el componente `EquipoPage`, encargado
+   * de mostrar la información del equipo.
+   */
+
+  { path: 'equip', component: EquipoPage },
 
   /**
    * Ruta comodín.
