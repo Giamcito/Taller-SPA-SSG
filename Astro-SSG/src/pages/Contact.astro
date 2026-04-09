@@ -1,0 +1,26 @@
+---
+import { CONTACT_CHANNELS } from "@data/Contact";
+import MainLayout from "@layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="container">
+    <div class="card border-0 shadow-sm">
+      <div class="card-body p-4">
+        <h2 class="card-title mb-3">Contacto</h2>
+        <p class="text-muted mb-4">Canales disponibles para comunicarte con nuestro equipo.</p>
+        <div class="row g-3">
+          {CONTACT_CHANNELS.map((channel) => (
+            <div class="col-12 col-md-4">
+              <div class="border rounded p-3 h-100">
+                <h6 class="mb-1">{channel.type}</h6>
+                <p class="mb-1">{channel.value}</p>
+                <small class="text-muted">{channel.note}</small>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>

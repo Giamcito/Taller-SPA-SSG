@@ -1,0 +1,36 @@
+@switch(state){
+
+	@case('loading'){
+		<app-alert alertState="loading" text="Cargando Servicios..." ></app-alert>
+	}
+
+	@case('error'){
+		<app-alert alertState="error" text="Error al Cargar los Servicios" ></app-alert>
+	}
+
+	@case('success'){
+		<div class="container">
+			<div class="card border-0 shadow-sm">
+				<div class="card-body p-4">
+					<h2 class="card-title mb-3">Servicios</h2>
+					<p class="text-muted mb-4">
+						Servicios cargados desde el modulo de datos de la aplicacion.
+					</p>
+
+					<div class="row g-3">
+						@for(service of services; track service.id){
+							<div class="col-12 col-md-4">
+								<div class="border rounded p-3 h-100">
+									<h5 class="mb-2">{{ service.name }}</h5>
+									<p class="mb-2">{{ service.description }}</p>
+									<span class="badge text-bg-primary">{{ service.area }}</span>
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+
+}
